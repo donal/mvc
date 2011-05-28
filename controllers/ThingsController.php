@@ -1,6 +1,7 @@
 <?php
 
 require_once(LIBRARY_PATH . DS . 'Template.php');
+require_once(APP_PATH . DS . 'models/Thing.php');
 
 class ThingsController {
 
@@ -16,6 +17,13 @@ class ThingsController {
   }
 
   public function show($id) {
+    $this->template->id = $id;
+
+    // get the thing with id = $id
+    $things = Thing::retrieve(array('id' => $id));
+    if (count($things) == 1) {
+      $this->template->thing = $things[0];
+    }
     $this->template->id = $id;
 
     $this->template->display('show.html.php');

@@ -20,3 +20,9 @@ $routes['#^/things/new$#i'] = array('controller' => 'things', 'action' => 'add')
 $routes['#^things/create$#i'] = array('controller' => 'things', 'action' => 'create');
 $routes['#^/things/([0-9]{1,5})$#i'] = array('controller' => 'things', 'action' => 'show');
 
+// database connection
+
+// $database_name  = 'mvc';
+// $database_user  = 'mvc';
+// $database_pw    = 'mvc';
+
