@@ -3,8 +3,6 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('APP_PATH', dirname(dirname(__FILE__)));
 
-set_include_path(APP_PATH . '/libraries/');
-
 $url = '/';
 if (isset($_GET['url'])) {
   $url .= $_GET['url'];
@@ -16,9 +14,7 @@ require_once (APP_PATH . DS . 'config' . DS . 'bootstrap.php');
 
 $routed = false;
 foreach ($routes as $route_regex => $path) {
-
   $matches = array();
-  // if (preg_match($route_regex, $url, $matches, PREG_OFFSET_CAPTURE, 1)) {
   if (preg_match($route_regex, $url, $matches)) {
     $route = $path;
     $routed = true;
