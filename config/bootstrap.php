@@ -3,7 +3,7 @@
 // require_once (APP_PATH . DS . 'config' . DS . 'config.php');
 // require_once (APP_PATH . DS . 'libraries' . DS . 'config.php');
 
-define('LIBRARY_PATH', dirname(__DIR__) . DS . 'libraries');
+define('LIBRARY_PATH', APP_PATH . DS . 'libraries');
 
 // TODO
 // 1. sanitise (remove magic quotes, slashes, global vars)
@@ -12,9 +12,10 @@ define('LIBRARY_PATH', dirname(__DIR__) . DS . 'libraries');
 // 4. error level/reporting
 
 // include routes
-
 $routes = array();
 $routes['#^/$#i'] = array('controller' => 'home', 'action' => 'index');
+$routes['#^/home$#i'] = array('controller' => 'home', 'action' => 'index');
+$routes['#^/home/index$#i'] = array('controller' => 'home', 'action' => 'index');
 $routes['#^/things$#i'] = array('controller' => 'things', 'action' => 'index');
 $routes['#^/things/new$#i'] = array('controller' => 'things', 'action' => 'add');
 $routes['#^things/create$#i'] = array('controller' => 'things', 'action' => 'create');
