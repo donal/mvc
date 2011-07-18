@@ -1,7 +1,6 @@
 <?php
 
-// require_once(LIBRARY_PATH . DS . 'Template.php');
-require_once('Template.php');
+require_once(LIBRARY_PATH . DS . 'Template.php');
 
 class HomeController {
 
