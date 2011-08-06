@@ -18,6 +18,9 @@ foreach ($routes as $route_regex => $path) {
   if (preg_match($route_regex, $url, $matches)) {
     $route = $path;
     $routed = true;
+    // route is found and matches array set, so leave foreach or 
+    // matches will be overwritten
+    break;
   }
 }
 
