@@ -19,9 +19,3 @@ $routes['#^/things/([0-9]{1,5})$#i'] = array('controller' => 'things', 'action' 
 $routes['#^/things/([0-9]{1,5})/edit$#i'] = array('controller' => 'things', 'action' => 'edit');
 $routes['#^/things/([0-9]{1,5})/update$#i'] = array('controller' => 'things', 'action' => 'edit');
 
-// database connection
-
-// $database_name  = 'mvc';
-// $database_user  = 'mvc';
-// $database_pw    = 'mvc';
-
